@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Arrays2D {
+class TwoDArray {
 
     static int[][] arr = new int[3][3];
 
