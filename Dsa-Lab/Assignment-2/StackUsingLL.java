@@ -4,7 +4,6 @@ public class StackUsingLL {
 
     static Scanner sc = new Scanner(System.in);
 
-    // Node
     static class Node {
         int data;
         Node next;
@@ -15,10 +14,7 @@ public class StackUsingLL {
         }
     }
 
-    // Top of Stack
     static Node top = null;
-
-    // Number of elements
     static int count = 0;
 
 
@@ -77,7 +73,7 @@ public class StackUsingLL {
     }
 
 
-    // PUSH
+    
     static void push() {
 
         System.out.println("Enter Data:");
@@ -94,7 +90,7 @@ public class StackUsingLL {
     }
 
 
-    // POP
+   
     static void pop() {
 
         if (top == null) {
@@ -112,7 +108,7 @@ public class StackUsingLL {
     }
 
 
-    // DISPLAY
+    
     static void display() {
 
         if (top == null) {
@@ -131,14 +127,14 @@ public class StackUsingLL {
     }
 
 
-    // SIZE
+  
     static void size() {
 
         System.out.println("Total items in stack: " + count);
     }
 
 
-    // isEmpty
+   
     static void isEmpty() {
 
         if (top == null) {
@@ -149,10 +145,9 @@ public class StackUsingLL {
     }
 
 
-    // isFull
+   
     static void isFull() {
 
-        // Linked List has no fixed size
-        System.out.println("No, Stack is not full");
+        System.out.println("No, Stack is not full because linked list has no fixed size");
     }
 }
