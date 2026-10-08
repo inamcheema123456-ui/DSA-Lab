@@ -81,8 +81,6 @@ class TwoDArray {
         } while (choice != 11);
     }
 
-
-    // 1. Add Value
     static void addValue() {
 
         if (size == arr.length * arr[0].length) {
@@ -103,8 +101,6 @@ class TwoDArray {
         System.out.println("------ Value is added ------");
     }
 
-
-    // 2. Insert at Position
     static void insertAtPosition() {
 
         if (size == arr.length * arr[0].length) {
@@ -130,7 +126,6 @@ class TwoDArray {
 
         int index = row * arr[0].length + col;
 
-        // Shift elements forward
         for (int i = size - 1; i >= index; i--) {
 
             int oldRow = i / arr[0].length;
@@ -149,8 +144,6 @@ class TwoDArray {
         System.out.println("------ Value is inserted ------");
     }
 
-
-    // 3. Fill Array
     static void fillArray() {
 
         if (size == arr.length * arr[0].length) {
@@ -180,7 +173,6 @@ class TwoDArray {
     }
 
 
-    // 4. Delete Last Element
     static void deleteLastElement() {
 
         if (size == 0) {
@@ -198,8 +190,6 @@ class TwoDArray {
         System.out.println("----- Last element is deleted -----");
     }
 
-
-    // 5. Delete by Position
     static void deleteByPosition() {
 
         if (size == 0) {
@@ -227,7 +217,6 @@ class TwoDArray {
             return;
         }
 
-        // Shift elements backward
         for (int i = index; i < size - 1; i++) {
 
             int currentRow = i / arr[0].length;
@@ -251,7 +240,6 @@ class TwoDArray {
     }
 
 
-    // 6. Display
     static void display() {
 
         if (size == 0) {
@@ -277,8 +265,6 @@ class TwoDArray {
         }
     }
 
-
-    // 7. Search Value
     static void searchValue() {
 
         if (size == 0) {
@@ -313,8 +299,6 @@ class TwoDArray {
         System.out.println("------ Value is not found ------");
     }
 
-
-    // 8. Get Value
     static void getAtSpecificPosition() {
 
         if (size == 0) {
@@ -349,8 +333,6 @@ class TwoDArray {
         );
     }
 
-
-    // 9. Replace / Update
     static void replaceValueAtSpecificPosition() {
 
         if (size == 0) {
@@ -386,8 +368,6 @@ class TwoDArray {
         System.out.println("Value is updated successfully!");
     }
 
-
-    // 10. Size
     static void showSize() {
 
         int total = arr.length * arr[0].length;
