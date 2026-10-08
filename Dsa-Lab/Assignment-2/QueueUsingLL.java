@@ -3,8 +3,6 @@ import java.util.Scanner;
 public class QueueUsingLL {
 
     static Scanner sc = new Scanner(System.in);
-
-    // Node
     static class Node {
         int data;
         Node next;
@@ -15,11 +13,8 @@ public class QueueUsingLL {
         }
     }
 
-    // Front and Rear
     static Node F = null;
     static Node R = null;
-
-    // Size
     static int count = 0;
 
     public static void main(String[] args) {
@@ -78,8 +73,6 @@ public class QueueUsingLL {
         } while (choice != 7);
     }
 
-
-    // ENQUEUE
     static void enqueue(int value) {
 
         Node newNode = new Node(value);
@@ -101,8 +94,6 @@ public class QueueUsingLL {
         System.out.println(value + " added to the queue");
     }
 
-
-    // DEQUEUE
     static void dequeue() {
 
         if (isEmpty()) {
@@ -121,8 +112,6 @@ public class QueueUsingLL {
         }
     }
 
-
-    // DISPLAY
     static void display() {
 
         if (isEmpty()) {
@@ -142,24 +131,21 @@ public class QueueUsingLL {
         System.out.println();
     }
 
-
-    // SIZE
     static void size() {
 
         System.out.println("Queue size : " + count);
     }
 
 
-    // isEmpty
     static boolean isEmpty() {
 
         return F == null;
     }
 
 
-    // isFull
+    
     static boolean isFull() {
-
+    System.out.println("Linked list has no fixed size");
         return false;
     }
 }
