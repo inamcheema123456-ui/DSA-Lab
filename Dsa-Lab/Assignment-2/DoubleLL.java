@@ -20,7 +20,6 @@ public class DoubleLL {
         size = 0;
     }
 
-    // Add to front - O(1)
     public void addFirst(int data) {
         Node newNode = new Node(data);
         if (head == null) {
@@ -33,7 +32,6 @@ public class DoubleLL {
         size++;
     }
 
-    // Add to end - O(1)
     public void addLast(int data) {
         Node newNode = new Node(data);
         if (tail == null) {
@@ -46,7 +44,6 @@ public class DoubleLL {
         size++;
     }
 
-    // Add at specific index - O(n)
     public void addAt(int index, int data) {
         if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException("Invalid index");
@@ -72,7 +69,7 @@ public class DoubleLL {
         size++;
     }
 
-    // Remove from front - O(1)
+  
     public void removeFirst() {
         if (head == null) return;
         if (head == tail) {
@@ -84,7 +81,7 @@ public class DoubleLL {
         size--;
     }
 
-    // Remove from end - O(1)
+   
     public void removeLast() {
         if (tail == null) return;
         if (head == tail) {
@@ -96,7 +93,6 @@ public class DoubleLL {
         size--;
     }
 
-    // Remove by index - O(n)
     public void removeAt(int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Invalid index");
@@ -116,7 +112,6 @@ public class DoubleLL {
         size--;
     }
 
-    // Remove first occurrence of a value - O(n)
     public boolean remove(int data) {
         Node current = head;
         while (current != null) {
@@ -137,8 +132,7 @@ public class DoubleLL {
         return false;
     }
 
-    // Helper: get node at index - O(n)
-    // Optimized to walk from whichever end is closer
+
     private Node getNode(int index) {
         Node current;
         if (index < size / 2) {
@@ -155,7 +149,6 @@ public class DoubleLL {
         return current;
     }
 
-    // Get value at index - O(n)
     public int get(int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Invalid index");
@@ -163,7 +156,6 @@ public class DoubleLL {
         return getNode(index).data;
     }
 
-    // Search for a value - O(n)
     public boolean contains(int data) {
         Node current = head;
         while (current != null) {
@@ -173,7 +165,7 @@ public class DoubleLL {
         return false;
     }
 
-    // Reverse the list - O(n)
+   
     public void reverse() {
         Node current = head;
         Node temp = null;
@@ -198,7 +190,6 @@ public class DoubleLL {
         return size == 0;
     }
 
-    // Print forward
     public void printForward() {
         Node current = head;
         StringBuilder sb = new StringBuilder("[");
@@ -211,7 +202,6 @@ public class DoubleLL {
         System.out.println(sb);
     }
 
-    // Print backward
     public void printBackward() {
         Node current = tail;
         StringBuilder sb = new StringBuilder("[");
