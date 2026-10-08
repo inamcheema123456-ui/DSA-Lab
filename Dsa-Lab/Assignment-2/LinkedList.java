@@ -6,7 +6,7 @@ public class LinkedList {
         int data;
         Node next;
 
-        // Constructor
+      
         Node(int data) {
             this.data = data;
             this.next = null;
@@ -17,13 +17,13 @@ public class LinkedList {
         private Node head;
         private int size;
 
-        // Constructor
+ 
         public MyLinkedList() {
             head = null;
             size = 0;
         }
 
-        // Add to end - O(n)
+     
         public void AddLast(int data) {
             Node Newnode = new Node(data);
             if (head == null) {
@@ -39,7 +39,7 @@ public class LinkedList {
             size++;
         }
 
-        // Add to front - O(n)
+      
         public void AddFirst(int data) {
             Node Newnode = new Node(data);
             Newnode.next = head;
@@ -47,7 +47,7 @@ public class LinkedList {
             size++;
         }
 
-        // Add at a specific index - O(n)
+      
         public void AddAt(int index, int data) {
             if (index < 0 || index > size) {
                 throw new IndexOutOfBoundsException("-------- Invalid Index --------");
@@ -68,7 +68,7 @@ public class LinkedList {
 
         }
 
-        // Remove first occurence of a value - O(n)
+      
         public boolean remove(int data) {
             if (head == null)
                 return false;
@@ -89,8 +89,7 @@ public class LinkedList {
             return false;
 
         }
-        // Remove by index- O(n)
-
+    
         public void RemoveAt(int index) {
             if (index < 0 || index > size) {
                 throw new IndexOutOfBoundsException("-------- Invalid Index --------");
@@ -109,7 +108,6 @@ public class LinkedList {
 
         }
 
-        // Get value at index- O(n)
         public int get(int index) {
             if (index < 0 || index > size) {
                 throw new IndexOutOfBoundsException("-------- Invalid Index --------");
@@ -122,7 +120,6 @@ public class LinkedList {
 
         }
 
-        // Search for a value- O(n)
         public boolean contains(int data) {
             Node current = head;
             while (current != null) {
@@ -134,7 +131,6 @@ public class LinkedList {
             return false;
         }
 
-        // Reverse the list- O(n)
         public void reverse() {
             Node prev = null;
             Node current = head;
@@ -154,7 +150,7 @@ public class LinkedList {
                 return size==0;
 
               }
-              //Print the list- O(n)
+             
               public void printList(){
                 Node current = head;
                 StringBuilder sb = new StringBuilder();
