@@ -66,8 +66,6 @@ public class CircularQueue {
         } while (choice != 7);
     }
 
-
-    // ENQUEUE
     static void enqueue(int value) {
 
         if (isFull()) {
@@ -75,12 +73,10 @@ public class CircularQueue {
             return;
         }
 
-        // First element
         if (F == -1) {
             F = 0;
         }
 
-        // Move Rear circularly
         R = (R + 1) % a;
 
         queue[R] = value;
@@ -88,8 +84,6 @@ public class CircularQueue {
         System.out.println(value + " added to the queue");
     }
 
-
-    // DEQUEUE
     static void dequeue() {
 
         if (isEmpty()) {
@@ -99,7 +93,6 @@ public class CircularQueue {
 
         System.out.println("Removed Value: " + queue[F]);
 
-        // Only one element was present
         if (F == R) {
             F = -1;
             R = -1;
@@ -110,8 +103,6 @@ public class CircularQueue {
         }
     }
 
-
-    // DISPLAY
     static void display() {
 
         if (isEmpty()) {
@@ -138,7 +129,6 @@ public class CircularQueue {
     }
 
 
-    // SIZE
     static void size() {
 
         if (isEmpty()) {
@@ -154,14 +144,10 @@ public class CircularQueue {
         }
     }
 
-
-    // ISEMPTY
     static boolean isEmpty() {
         return F == -1;
     }
 
-
-    // ISFULL
     static boolean isFull() {
         return (R + 1) % a == F;
     }
