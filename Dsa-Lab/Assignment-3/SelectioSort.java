@@ -30,7 +30,7 @@ public static void main(String[] args){
      //Time Complexity = O(n^2)
 
     long end = System.nanoTime();
-    long time = start-end;
+    long time = end-start;
      System.out.println("********** Selection Sort Completed! ********");
           System.out.println("Total Elements:" +arr.length);
            System.out.println("Execution time in NanoSeconds:" +time);
